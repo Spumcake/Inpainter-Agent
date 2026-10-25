@@ -25,5 +25,7 @@ A general skill says how to go about a task, with any model and in any setup. It
 | [train-lora](skills/train-lora/SKILL.md) | trains a character LoRA with a model family's recipe |
 | [test-lora](skills/test-lora/SKILL.md) | tests a character LoRA for breadth across every look |
 | [create-character-lora](skills/create-character-lora/SKILL.md) | sequences the steps above into a tested character LoRA |
+| [image-to-video](skills/image-to-video/SKILL.md) | animates a first frame, optionally to a last frame, with sound |
+| [image-to-video-prompt-guide](skills/image-to-video-prompt-guide/SKILL.md) | writes a video prompt: action, pace, camera, ending, and sound |
 
 Every skill keeps the person in charge. Nothing renders, trains, downloads, or spends money before they approve that plan, and they choose what to keep.

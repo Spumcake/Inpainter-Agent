@@ -8,6 +8,11 @@ How a task is split across skills, so one general skill serves any model and any
   - It says how to go about a task: the method, what good looks like, what the owner approves, and when to stop and ask.
   - It names no model, server, folder, key, price, or command.
   - It has no scripts.
+  - As the owner set on 2026-10-25, a kind of media comes as a pair of general skills:
+    - **a task skill,** such as `image-to-video`, which holds the method and the approvals;
+    - **a prompt guide,** `<task>-prompt-guide`, which says what a good prompt for that kind of media holds with any model.
+
+    Every workflow has a prompt skill for each kind of request, whether its model runs as a graph or as a hosted service, and a prompt file holds only named fields, which any execution skill can read. The prompt guide writes through `write-prompt`, and reads each model's own syntax from the graph's prompt skill (a workflow's `prompt-skills/<name>.md`, the only thing called a prompt skill). The task skill renders through an execution skill that implements the task itself, or else through one that implements `run-prompt`.
 - **Workflow skill.** It lives in one model family's workflow repository, such as `illustrious-workflows`, and is named after that repository.
   - It says what is true of that model: how to prompt it, what its looks and graphs are for, its training recipe, and its licence.
   - Scripts read the same facts from the repository's `workflow.json`, which [workflow-manifest.md](workflow-manifest.md) describes.
